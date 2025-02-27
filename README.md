@@ -112,6 +112,9 @@ This project includes a CI/CD pipeline using GitHub Actions to automate API test
 
 ## Repository Structure
 
+![image](https://github.com/user-attachments/assets/2521055b-9018-473a-af81-be9b891601b3)
+
+
 coin-gecko-api-qa/
 ├── .github/
 │   └── workflows/
