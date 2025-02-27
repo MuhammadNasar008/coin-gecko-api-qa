@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "dceeac04-3330-41a6-8ccd-95fdd75d1e6f",
+		"name": "CoinGecko API Tests",
+		"description": "This collection features end-to-end tests that ensure the CoinGecko API components function as expected. Check out the **Functional Testing Collection** and **Integration Testing Collection** for additional test cases for this API.\n\n---\n\n### **🪐 Get Started**\n\nThe CoinGecko API testing team is responsible for validating the functionality, performance, and security of the CoinGecko API. You can use this collection to:\n\n- Validate specific workflows for your team.\n    \n- Increase your test coverage and make your applications more resilient.\n    \n\n#### **To test the CoinGecko API, you can:**\n\n1. **Review tests and scripts**:\n    \n    - Check out the tests in the **Scripts** tab of a collection, folder, or request.\n        \n    - Explore the **Pre-request Script** for steps like setting variables or building request payloads.\n        \n2. **Run tests**:\n    \n    - To run the entire collection, select **Run collection** from the collection menu.\n        \n    - To test a specific use case, select **Run folder** from the folder menu.\n        \n    - Note: Many tests contain logic that passes data between requests. Run them in order (top to bottom) for accurate results.\n        \n3. **Review test results**:\n    \n    - Test cases include error messages to help debug issues.\n        \n    - If using this collection as a pre-merge check, ensure all tests pass before submitting (and no, deleting failing tests isn’t an option 😉).\n        \n\n---\n\n### **🧑‍💻 How Your Team Can Use This Collection**\n\n1. **Add a mock server**:\n    \n    - Speed up development by creating a mock server with example responses from this collection.\n        \n    - Write tests against the mock, then switch to the live API once your changes are ready.\n        \n2. **Integrate tests with your CI/CD pipeline**:\n    \n    - Use this comprehensive test suite in your CI/CD pipeline.\n        \n    - Generate the Postman CLI command from the **Collection Runner** and add it to your pipeline checks.\n        \n3. **Add a monitor**:\n    \n    - Keep tabs on the CoinGecko API’s status by adding a monitor to this collection.\n        \n    - Receive alerts for any breaking changes or downtime.\n        \n\n---\n\n### **🔍 What We’re Testing**\n\nThis collection focuses on key CoinGecko API workflows, including:\n\n1. **Simple Price Endpoint**:\n    \n    - Retrieves the current price of cryptocurrencies in specified currencies.\n        \n    - Tests for data accuracy, response structure, and error handling.\n        \n2. **Coin List Endpoint**:\n    \n    - Fetches a list of all available coins.\n        \n    - Validates the response format and ensures all required fields are present.\n        \n3. **Coin Markets Endpoint**:\n    \n    - Retrieves market data for cryptocurrencies.\n        \n    - Tests for performance, data correctness, and error handling.\n        \n\n---\n\n### **🔒 A Note on Authorization**\n\nThe CoinGecko API does not require an API key for the free tier. However, if you’re using a paid plan, you can set the API key at the collection level for authorization.\n\n---\n\n### **👀 View and Share Run Results**\n\nInterested in seeing previous run results? Here’s how you can stay in the loop:\n\n1. **Runs tab**:\n    \n    - View past collection runs in the **Runs** tab.\n        \n    - See who ran the tests, when they were run, and whether they passed or failed.\n        \n2. **Monitors**:\n    \n    - Set up a monitor for this collection to track historical run information.\n        \n    - Integrate with Slack or other services to receive real-time alerts.\n        \n\n---\n\n### **🤝 Increase Test Coverage**\n\nThe CoinGecko API testing team wants to ensure your team has everything needed to successfully test the API. If your team is using the API in a way not covered by this collection, reach out to us:\n\n- Tag `@coingecko-api-support` on your internal Slack.\n    \n- Add an inline comment to this collection with your test case suggestions.\n    \n\n---\n\n### **Sample Collection Structure**\n\n#### **Folders and Requests**\n\n1. **Simple Price Endpoint**:\n    \n    - Request: `GET /simple/price?ids=bitcoin&vs_currencies=usd`\n        \n    - Tests: Validate status code, response structure, and data accuracy.\n        \n2. **Coin List Endpoint**:\n    \n    - Request: `GET /coins/list`\n        \n    - Tests: Validate status code, response format, and presence of required fields.\n        \n3. **Coin Markets Endpoint**:\n    \n    - Request: `GET /coins/markets?vs_currency=usd`\n        \n    - Tests: Validate status code, response structure, and performance.\n        \n\n---\n\n### **Example Test Script**\n\n#### **Simple Price Endpoint**\n\njavascriptCopy\n\n```\npm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\npm.test(\"Response contains Bitcoin price in USD\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an('object');\n    pm.expect(jsonData.bitcoin).to.be.an('object');\n    pm.expect(jsonData.bitcoin.usd).to.be.a('number');\n});\n\n ```\n\n---\n\n### **Final Notes**\n\nThis collection is designed to help you thoroughly test the CoinGecko API. Use it to validate functionality, improve test coverage, and ensure your applications are resilient. If you have any questions or suggestions, feel free to reach out!\n\n---\n\nLet me know if you need further assistance or additional details! 😊\n\nmake it specific to requirement\n\nGot it! I’ll rewrite the text to **specifically align with your QA Testing Task requirements** for the CoinGecko API. This will include details about functionality, performance, data accuracy, error handling, and security testing, as outlined in your task.\n\n---\n\n### **CoinGecko API Testing Collection**\n\nThis collection features comprehensive tests to validate the **functionality, performance, data accuracy, error handling, and security** of the CoinGecko API. It is designed to help you ensure the API meets the highest standards of reliability and accuracy.\n\n---\n\n### **🪐 Get Started**\n\nThe CoinGecko API testing task focuses on the following key areas:\n\n1. **Functionality**: Verify API endpoints work as expected.\n    \n2. **Performance**: Measure response times and system load.\n    \n3. **Data Accuracy**: Ensure the data returned is correct.\n    \n4. **Error Handling**: Validate proper error messages for invalid requests.\n    \n5. **Security**: Identify vulnerabilities (e.g., SQL injection, unauthorized access).\n    \n\n#### **To test the CoinGecko API, you can:**\n\n1. **Review tests and scripts**:\n    \n    - Check out the tests in the **Scripts** tab of each request.\n        \n    - Explore the **Pre-request Script** for steps like setting variables or building request payloads.\n        \n2. **Run tests**:\n    \n    - To run the entire collection, select **Run collection** from the collection menu.\n        \n    - To test a specific endpoint, select **Run folder** from the folder menu.\n        \n    - Note: Tests are designed to run in order (top to bottom) for accurate results.\n        \n3. **Review test results**:\n    \n    - Test cases include error messages to help debug issues.\n        \n    - Ensure all tests pass before submitting your results.\n        \n\n---\n\n### **🧑‍💻 How Your Team Can Use This Collection**\n\n1. **Add a mock server**:\n    \n    - Speed up development by creating a mock server with example responses from this collection.\n        \n    - Write tests against the mock, then switch to the live API once your changes are ready.\n        \n2. **Integrate tests with your CI/CD pipeline**:\n    \n    - Use this test suite in your CI/CD pipeline.\n        \n    - Generate the Postman CLI command from the **Collection Runner** and add it to your pipeline checks.\n        \n3. **Add a monitor**:\n    \n    - Keep tabs on the CoinGecko API’s status by adding a monitor to this collection.\n        \n    - Receive alerts for any breaking changes or downtime.\n        \n\n---\n\n### **🔍 What We’re Testing**\n\nThis collection focuses on the following **API endpoints** and test scenarios:\n\n#### **1\\. Simple Price Endpoint**\n\n- **Request**: `GET /simple/price?ids=ethereum&vs_currencies=usd`\n    \n- **Tests**:\n    \n    - Validate status code (`200`).\n        \n    - Verify response structure: `{\"ethereum\": {\"usd\": value}}`.\n        \n    - Check data accuracy by comparing the response with the CoinGecko website.\n        \n\n#### **2\\. Coin List Endpoint**\n\n- **Request**: `GET /coins/list`\n    \n- **Tests**:\n    \n    - Validate status code (`200`).\n        \n    - Verify response structure: List of coins with `id`, `symbol`, and `name`.\n        \n    - Ensure the list includes popular coins like Bitcoin and Ethereum.\n        \n\n#### **3\\. Coin Markets Endpoint**\n\n- **Request**: `GET /coins/markets?vs_currency=usd`\n    \n- **Tests**:\n    \n    - Validate status code (`200`).\n        \n    - Verify response structure: Market data with `id`, `symbol`, `current_price`, etc.\n        \n    - Check data accuracy for specific coins.\n        \n\n---\n\n### **🔒 A Note on Authorization**\n\nThe CoinGecko API does not require an API key for the free tier. However, if you’re using a paid plan, you can set the API key at the collection level for authorization.\n\n---\n\n### **👀 View and Share Run Results**\n\nInterested in seeing previous run results? Here’s how you can stay in the loop:\n\n1. **Runs tab**:\n    \n    - View past collection runs in the **Runs** tab.\n        \n    - See who ran the tests, when they were run, and whether they passed or failed.\n        \n2. **Monitors**:\n    \n    - Set up a monitor for this collection to track historical run information.\n        \n    - Integrate with Slack or other services to receive real-time alerts.\n        \n\n---\n\n### **🤝 Increase Test Coverage**\n\nThe CoinGecko API testing team wants to ensure your team has everything needed to successfully test the API. If your team is using the API in a way not covered by this collection, reach out to us:\n\n- Tag `@coingecko-api-support` on your internal Slack.\n    \n- Add an inline comment to this collection with your test case suggestions.\n    \n\n---\n\n### **Sample Collection Structure**\n\n#### **Folders and Requests**\n\n1. **Functionality Testing**:\n    \n    - Request: `GET /simple/price?ids=ethereum&vs_currencies=usd`\n        \n    - Tests: Validate status code, response structure, and data accuracy.\n        \n2. **Performance Testing**:\n    \n    - Request: `GET /coins/markets?vs_currency=usd`\n        \n    - Tests: Measure response times under load using K6.\n        \n3. **Error Handling Testing**:\n    \n    - Request: `GET /simple/price?ids=invalid_id&vs_currencies=usd`\n        \n    - Tests: Validate error messages for invalid requests.\n        \n4. **Security Testing**:\n    \n    - Request: `GET /simple/price?ids=bitcoin&vs_currencies=usd`\n        \n    - Tests: Check for vulnerabilities like SQL injection.\n        \n\n---\n\n### **Example Test Script**\n\n#### **Simple Price Endpoint**\n\njavascriptCopy\n\n```\npm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\npm.test(\"Response contains Ethereum price in USD\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an('object');\n    pm.expect(jsonData.ethereum).to.be.an('object');\n    pm.expect(jsonData.ethereum.usd).to.be.a('number');\n});\n\n ```\n\n#### **Error Handling Test**\n\njavascriptCopy\n\n```\npm.test(\"Status code is 400 for invalid request\", function () {\n    pm.response.to.have.status(400);\n});\npm.test(\"Error message is returned\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.error).to.be.a('string');\n});\n\n ```\n\n---\n\n### **Final Notes**\n\nThis collection is designed to help you thoroughly test the CoinGecko API. Use it to validate functionality, improve test coverage, and ensure your applications are resilient. If you have any questions or suggestions, feel free to reach out!\n\nEndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15536370"
+	},
+	"item": [
+		{
+			"name": "Simple Price Endpoint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd",
+					"protocol": "https",
+					"host": [
+						"api",
+						"coingecko",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"simple",
+						"price"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "bitcoin"
+						},
+						{
+							"key": "vs_currencies",
+							"value": "usd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coin List Endpoint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.coingecko.com/api/v3/coins/list",
+					"protocol": "https",
+					"host": [
+						"api",
+						"coingecko",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"coins",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coin Markets Endpoint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin",
+					"protocol": "https",
+					"host": [
+						"api",
+						"coingecko",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"coins",
+						"markets"
+					],
+					"query": [
+						{
+							"key": "vs_currency",
+							"value": "usd"
+						},
+						{
+							"key": "ids",
+							"value": "bitcoin"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "api-key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{apiKey}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://template.postman-echo.com",
+			"type": "string"
+		},
+		{
+			"key": "apiKey",
+			"value": "OMpqVWAH.UC80wyXTtPwhDgAUdCTx6"
+		}
+	]
+}

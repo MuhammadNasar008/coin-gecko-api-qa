@@ -1,0 +1,27 @@
+{
+	"id": "0fece809-ab79-464f-af64-66a8ae7d6537",
+	"name": "CoinGecko_API_Testing_Environment",
+	"values": [
+		{
+			"key": "Development",
+			"value": "https://api.coingecko.com/api/v3/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "Staging",
+			"value": "https://api.coingecko.com/api/v3",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "Production",
+			"value": "https://api.coingecko.com/api/v3",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-02-27T00:31:34.128Z",
+	"_postman_exported_using": "Postman/11.34.3"
+}
